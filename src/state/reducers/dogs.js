@@ -11,7 +11,7 @@ export default (
         breedsList: Object.entries(
           action.breedsList
         ).map(([breed, subBreed]) => ({
-          breed: breed,
+          breed: `${breed.charAt(0).toUpperCase() + breed.slice(1)}`,
           subBreeds: [...subBreed],
         })),
       };
