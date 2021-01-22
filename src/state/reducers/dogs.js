@@ -32,8 +32,7 @@ export default (
         ),
       };
     }
-    case "GENERATE_BREED_IMAGE_ROW": {
-      console.log(action);
+    case "GENERATE_BREED_IMAGE_ROW": {s
       return {
         ...state,
         breedImageRows: [
@@ -46,7 +45,6 @@ export default (
       const updatedRows = state.breedImageRows.map((row) =>
         row.id === action.id ? { ...row, ...action.rowData } : row
       );
-      console.log('updatedRows', updatedRows, 'action', action)
       return {
         ...state,
         breedImageRows: [...updatedRows],
