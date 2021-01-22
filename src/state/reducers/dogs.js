@@ -13,6 +13,8 @@ export default (
     breedImageRows: [
       { id: uuidv4(), breed: "", subBreed: "", imageQuantity: 1 },
     ],
+    dogImages: [],
+    isFetching: false
   },
   action
 ) => {
@@ -49,6 +51,13 @@ export default (
         ...state,
         breedImageRows: [...updatedRows],
       };
+    }
+    case "SET_DOG_IMAGES": {
+      return {
+        ...state,
+        dogImages: [...action.images],
+        isFetching: false
+      }
     }
     default:
       return state;
