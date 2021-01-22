@@ -32,7 +32,7 @@ export default (
         ),
       };
     }
-    case "GENERATE_BREED_IMAGE_ROW": {s
+    case "GENERATE_BREED_IMAGE_ROW": {
       return {
         ...state,
         breedImageRows: [
