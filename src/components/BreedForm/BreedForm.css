@@ -1,0 +1,16 @@
+.breed-form-container {
+    display: grid;
+    grid-auto-flow: row;
+    align-content: center;
+}
+
+.breed-form-container button {
+    height: 35px;
+    align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .breed-form-container {
+        grid-auto-flow: column;
+    }
+}

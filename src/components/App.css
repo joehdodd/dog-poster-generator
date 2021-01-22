@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.app-section-wrapper {
+  display: grid;
+  grid-gap: 8px;
+  align-items: flex-start;
+  margin: 24px auto;
+  width: 95%;
+}
+
+@media screen and (min-width: 1024px) {
+  .app-section-wrapper {
+    width: 50%;
+  }
+}
