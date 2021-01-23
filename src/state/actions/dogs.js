@@ -40,14 +40,13 @@ function setDogImages(images) {
 function setFetchingImages(bool) {
   return {
     type: "FETCHING_DOG_IMAGES",
-    bool
-  }
+    bool,
+  };
 }
 
 const generateImageModal = () => {
   return async (dispatch, getState) => {
-    // https://dog.ceo/api/breed/hound/afghan/images/random/3
-    dispatch(setFetchingImages(true))
+    dispatch(setFetchingImages(true));
     const { breedImageRows } = getState().dogs;
     try {
       let allDogImages = await Promise.all(
@@ -58,7 +57,11 @@ const generateImageModal = () => {
               : `${row.breed.toLowerCase()}`;
           let endPoint = `breed/${breedSubbreed}/images/random/${row.imageQuantity}`;
           let rowImages = await API(`/${endPoint}`, { method: "GET" });
-          return { breed: row.breed, images: rowImages.data.message };
+          return {
+            breed: row.breed,
+            subBreed: row.subBreed,
+            images: rowImages.data.message,
+          };
         })
       );
       dispatch(setDogImages(allDogImages));

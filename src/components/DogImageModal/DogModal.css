@@ -1,35 +1,42 @@
+.dog-image-modal {
+  width: 85%;
+}
+
 .breed-images-wrapper {
-    padding: 0px 0px 32px 0px;
+  padding: 0px 0px 32px 0px;
 }
 
 .breed-images-wrapper h2 {
-    margin: 0;
+  margin: 0;
 }
 
-.breed-images-container { 
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: 8px;
-    align-items: start;;
-    margin-bottom: 16px;
+.breed-images-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 8px;
+  align-items: start;
+  margin-bottom: 16px;
 }
-
 
 .breed-images-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
 }
 
 @media screen and (min-width: 768px) {
-    .breed-images-container {
-        grid-template-columns: 1fr 1fr;
-    }
+  .dog-image-modal {
+    width: 75%;
+  }
+
+  .breed-images-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .breed-images-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  .dog-image-modal {
+    width: 50%;
+  }
 }
