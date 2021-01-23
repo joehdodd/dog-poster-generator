@@ -68,7 +68,9 @@ export default ({
           </MenuItem>
           {!!breedsList.length &&
             breedsList.map((breed) => (
-              <MenuItem value={breed.breed}>{breed.breed}</MenuItem>
+              <MenuItem key={breed.breed} value={breed.breed}>
+                {breed.breed}
+              </MenuItem>
             ))}
         </Select>
       </FormControl>

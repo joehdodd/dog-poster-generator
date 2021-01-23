@@ -10,7 +10,7 @@ export default ({ dogImages }) => (
         )}
         <div className="breed-images-container">
           {dogImageRow.images.map((img, i) => (
-            <img key={i} src={img} alt={`Photo of a ${dogImageRow.breed}`} />
+            <img key={i} src={img} alt={`${dogImageRow.breed}`} />
           ))}
         </div>
       </div>
