@@ -53,7 +53,6 @@ export default (
       };
     }
     case "SET_DOG_IMAGES": {
-      console.log(action)
       return {
         ...state,
         dogImages: [...action.images],
